@@ -303,7 +303,7 @@ input {
   background-color: #00d4ff;
 }
 
-#hamburger {
+.hamburger {
   display: none;
 }
 
@@ -328,31 +328,34 @@ input {
     max-width: 125px;
   }
 
-  #ul {
+  .nav-list {
     display: none;
+    flex-direction: column;
     position: absolute;
     top: 50px;
     right: 0;
-     background: rgba(15, 15, 20, 0.5); /* dark translucent panel */
+     background: rgba(15, 15, 20, 0.9); /* dark translucent panel */
   border: 1px solid #00f0ff; 
+  z-index: 1000;
   }
 
-  #ul.active {
+  .nav-list.active {
     display: flex;
     flex-direction: column;
   }
 
 
 
-  #hamburger {
+  .hamburger {
     display: flex;
     color: white;
     font-size: 25px;
     margin-top: 5px;
     margin-right: 10px;
+    cursor: pointer;
   }
 
-  #hamburger:active {
+  .hamburger:active {
     color: #00f0ff;
   }
 

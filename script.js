@@ -1,8 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Figure out where we are (index.html = 0, public/about.html = 1 level deep)
   const isRoot = location.pathname.endsWith("index.html") || location.pathname === "/avdev/";
-
-  // Set the correct image path prefix
   const prefix = isRoot ? "assets/" : "../assets/";
 
   const myimage = document.getElementById("git_js");
@@ -25,12 +22,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const hamburger = document.getElementById("hamburger");
-  const ul = document.getElementById("ul");
-  if (hamburger && ul) {
-    hamburger.addEventListener("click", () => {
-      ul.classList.toggle("active");
+  const hamburger = document.querySelector(".hamburger");
+  const navList = document.querySelector(".nav-list");
+
+  if (hamburger && navList) {
+    hamburger.addEventListener("click", (e) => {
+      e.stopPropagation();
       hamburger.classList.toggle("active");
+      navList.classList.toggle("active");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (
+        navList.classList.contains("active") &&
+        !navList.contains(e.target) &&
+        !hamburger.contains(e.target)
+      ) {
+        navList.classList.remove("active");
+        hamburger.classList.remove("active");
+      }
     });
   }
 });
