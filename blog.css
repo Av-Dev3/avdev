@@ -8,8 +8,8 @@
 
 
 #blog_content {
-  grid-column: 2;
-  justify-items: center;
+  display: flex;
+  flex-direction: row;
 }
 
 #all_posts h2 {
@@ -21,9 +21,8 @@
 }
 
 #all-posts-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  display: flex;
+  gap: 10px;
   padding-right: 5px;
   padding-left: 5px;
 }
@@ -36,7 +35,7 @@
 }
 
 .blog-card {
-  max-height: 400px;
+  max-height: 500px;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -68,4 +67,12 @@
   overflow: hidden;
   text-overflow: ellipsis;
 
+}
+
+@media (max-width: 768px) {
+  #all-posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
 }
