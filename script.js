@@ -2,20 +2,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const myimage = document.getElementById("git_js");
   if (myimage) {
     myimage.addEventListener("mouseover", () => {
-      myimage.src = "/assets/Git3.png";
+      myimage.src = "../assets/Git3.png";
     });
     myimage.addEventListener("mouseout", () => {
-      myimage.src = "/assets/GitHub_Invertocat_Light.png";
+      myimage.src = "../assets/GitHub_Invertocat_Light.png";
     });
   }
 
   const myimage_2 = document.getElementById("codepen");
   if (myimage_2) {
     myimage_2.addEventListener("mouseover", () => {
-      myimage_2.src = "/assets/codepen3.png";
+      myimage_2.src = "../assets/codepen3.png";
     });
     myimage_2.addEventListener("mouseout", () => {
-      myimage_2.src = "/assets/logo-white.png";
+      myimage_2.src = "../assets/logo-white.png";
     });
   }
 
