@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/habit/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="spacer"></div>
+  <h2>Habit Tracker</h2>
+  <a href="/index.html"><img src="/habit/logo.png" alt=""></a>
+  </header>
+  <form>
+  <div class="form-group">
+    <label for="habit">Habit</label>
+    <input type="text" id="habit">
+    </div>
+    <div class="form-group">
+      <label for="start-date">Start Date</label>
+      <input type="date" id="start-date">
+    </div>
+    <div class="form-group">
+      <label for="frequency">Frequency</label>
+      <select name="frequency" id="frequency">
+        <option value="daily">Daily</option>
+        <option value="weekly">Weekly</option>
+        <option value="monthly">Monthly</option>
+      </select>
+    </div>
+    <div class="form-group">
+    <button type="submit">Add Habit</button>
+    </div>
+  </form>
+  <section id="habit-list" style="display: none;">
+    <h2 id="habit-head">My Habits</h2>
+    <div id="habit-picker"></div>
+  </section>
+  <section id="habit-details" class="habit-details-container" style="display: none;">
+  </section>
+  <script src="/habit/script.js"></script>
+</body>
+</html>

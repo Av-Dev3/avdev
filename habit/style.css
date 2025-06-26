@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9f9f9f9;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+h2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+img {
+  height: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+.spacer {
+  height: 50px;
+}
+
+body h2 {
+  color: #1f2937;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+form  {
+  max-width: 420px;
+  margin: auto;
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+ 
+ 
+
+label {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+input, select {
+  padding: 12px;
+  border: 1px solid #dcdcdcdc;
+  border-radius: 12px;
+  font-size: 14px;
+  background-color: #fdfdfdfd;
+}
+
+button[type="submit"] {
+  padding: 14px;
+  background-color: #9cccac;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transfrom 0.2s ease, background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #84ba99;
+  transform: scale(1.02);
+}
+
+.habit-button {
+  padding: 4px;
+  background-color: #9cccac;
+  color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.habit-button:hover {
+  background-color: #84ba99;
+  transform: scale(1.02);
+}
+
+#habit-list {
+  padding: 20px;
+  max-width: 420px;
+  margin: 40px auto 0;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0, 0.05);
+}
+
+#habit-picker {
+  font-size: 18px;
+}
+
+#habit-head {
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: #2e7d32;
+  text-align: center;
+}
+
+.habit-container {
+  margin: 0;
+  padding: 0;
+}
+
+.habit-details-container {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 16px;
+  background: #e8f5e9;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0, 0.03);
+}
+
+.habit-details-container button {
+  padding: 4px;
+  background-color: #9cccac;
+  color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.habit-details-container button:hover {
+  background-color: #84ba99;
+  transform: scale(1.02);
+}

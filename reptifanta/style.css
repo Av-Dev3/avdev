@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Tint&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=New+Amsterdam&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&family=Teko:wght@300..700&display=swap");
+
+html,
+body {
+  margin: 0;
+  background-image: url(https://images.unsplash.com/photo-1454117096348-e4abbeba002c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHdlYnNpdGUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: rgb(0, 0, 0);
+}
+
+#logo {
+  grid-column: 1;
+  align-content: center;
+  color: white;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+#logotwo {
+  font-family: "Tangerine";
+  font-size: 50px;
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(
+    90deg,
+    rgba(3, 84, 14, 1) 0%,
+    rgba(31, 184, 82, 1) 29%,
+    rgba(8, 112, 42, 1) 52%,
+    rgba(3, 158, 52, 1) 100%
+  );
+}
+
+.nav {
+  grid-column: span 2;
+  align-content: end;
+  justify-items: center;
+  align-self: center;
+}
+
+.items {
+  display: inline-block;
+  padding: 0px 16px;
+  margin-bottom: -5px;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+.items a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  font-family: "Bebas Neue";
+  transition: transform 0.3s ease;
+}
+
+.items a:hover {
+  display: inline-block;
+  color: #08702a;
+  transform: scale(1.1) translate(2px);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.header a {
+  grid-column: 1;
+  align-self: center;
+}
+
+#logo {
+  height: 75px;
+}
+
+#nav_two {
+  grid-column: 4;
+  justify-self: end;
+  align-self: center;
+}
+
+#avdev {
+  height: 50px;
+}
+
+#main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+#sect {
+  grid-column: span 2;
+}
+
+#aside {
+  grid-column: 4;
+}
+
+#snake {
+  height: 250px;
+}
+
+article {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 2px solid #303333;
+  transition: transform 0.3s ease;
+  height: 32.1vh;
+}
+
+article:hover {
+  box-shadow: 5px 5px 20px #606666;
+  transform: scale(1.05);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+p {
+  font-family: "Raleway";
+  font-weight: 300;
+}
+
+.h2 {
+  font-family: "Playfair Display";
+  font-weight: 600;
+}
+
+#aside {
+  grid-column: 4;
+  grid-row: 1;
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 2px solid #303333;
+  height: 70vh;
+}
+
+footer {
+  background-color: black;
+  padding: 5px;
+}
+
+#sect_reptile {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#sect_reptile article {
+  display: block;
+  height: auto;
+}
+
+#sect_reptile article:hover {
+  transform: scale(1.02);
+}
+
+.reptile_image {
+  height: auto;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .header {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+  }
+
+  .nav_list {
+    text-align: center;
+    padding: 0;
+  }
+
+  .items a {
+    font-size: 20px;
+  }
+
+  #logo {
+    text-align: center;
+  }
+
+  #main {
+    display: block;
+  }
+
+  #aside {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    height: auto;
+  }
+
+  #snake {
+    width: 100%;
+    height: auto;
+  }
+
+  body {
+    background-size: cover;
+  }
+
+  article {
+    height: auto;
+  }
+
+  article:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .items a:hover {
+    transform: none;
+  }
+
+  #sect_reptile {
+    display: block;
+  }
+
+  #nav_two {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+@media (min-width: 600px) and (max-width: 1024px) {
+  .header {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .nav {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .items a {
+    font-size: 27px;
+  }
+
+  #logo {
+    text-align: center;
+  }
+
+  
+
+  #logo {
+    font-size: 40px;
+  }
+
+  #nav_two {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  #main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  #sect {
+    grid-column: 1;
+  }
+
+  #aside {
+    grid-column: 2;
+    height: fit-content;
+  }
+
+  #snake {
+    height: auto;
+    width: 100%;
+  }
+
+  #sect_reptile {
+    display: flex;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .header {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .header a {
+    grid-column: 1;
+  }
+
+ #logo {
+  font-size: 35px;
+ }
+}
