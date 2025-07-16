@@ -3,7 +3,7 @@ const BLOG_HOSTNAME = "full-stack-in-progress.hashnode.dev";
 const query = `
   query {
     publication(host: "${BLOG_HOSTNAME}") {
-      posts(first: 3) {
+      posts(first: 4) {
         edges {
           node {
             title
