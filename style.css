@@ -627,12 +627,14 @@ p {
 .footer-logo,
 footer .footer-logo,
 .footer .footer-logo {
-  max-width: 120px;
-  width: 120px;
-  height: auto;
+  max-width: 120px !important;
+  width: 120px !important;
+  height: auto !important;
   margin-bottom: 1rem;
-  display: block;
-  object-fit: contain;
+  display: block !important;
+  object-fit: contain !important;
+  flex-shrink: 0 !important;
+  overflow: hidden !important;
 }
 
 .footer-content {
@@ -823,10 +825,16 @@ footer .footer-social img,
   
   .footer-logo,
   footer .footer-logo,
-  .footer .footer-logo {
-    max-width: 80px !important;
-    width: 80px !important;
+  .footer .footer-logo,
+  .footer img.footer-logo,
+  footer img.footer-logo,
+  .footer img[src*="logo2.png"] {
+    max-width: 60px !important;
+    width: 60px !important;
     height: auto !important;
+    object-fit: contain !important;
+    flex-shrink: 0 !important;
+    overflow: hidden !important;
   }
   
   .footer-social {
@@ -889,10 +897,16 @@ footer .footer-social img,
   
   .footer-logo,
   footer .footer-logo,
-  .footer .footer-logo {
-    max-width: 70px !important;
-    width: 70px !important;
+  .footer .footer-logo,
+  .footer img.footer-logo,
+  footer img.footer-logo,
+  .footer img[src*="logo2.png"] {
+    max-width: 50px !important;
+    width: 50px !important;
     height: auto !important;
+    object-fit: contain !important;
+    flex-shrink: 0 !important;
+    overflow: hidden !important;
   }
   
   .footer-social a {
@@ -921,10 +935,16 @@ footer .footer-social img,
 @media (max-width: 360px) {
   .footer-logo,
   footer .footer-logo,
-  .footer .footer-logo {
-    max-width: 60px !important;
-    width: 60px !important;
+  .footer .footer-logo,
+  .footer img.footer-logo,
+  footer img.footer-logo,
+  .footer img[src*="logo2.png"] {
+    max-width: 40px !important;
+    width: 40px !important;
     height: auto !important;
+    object-fit: contain !important;
+    flex-shrink: 0 !important;
+    overflow: hidden !important;
   }
   
   .footer-social a {
@@ -953,10 +973,16 @@ footer .footer-social img,
 @media (max-width: 320px) {
   .footer-logo,
   footer .footer-logo,
-  .footer .footer-logo {
-    max-width: 50px !important;
-    width: 50px !important;
+  .footer .footer-logo,
+  .footer img.footer-logo,
+  footer img.footer-logo,
+  .footer img[src*="logo2.png"] {
+    max-width: 35px !important;
+    width: 35px !important;
     height: auto !important;
+    object-fit: contain !important;
+    flex-shrink: 0 !important;
+    overflow: hidden !important;
   }
   
   .footer-social a {
@@ -1835,6 +1861,75 @@ html {
   .contact-cta,
   .footer {
     display: none;
+  }
+}
+
+/* Emergency footer logo fix for mobile */
+@media (max-width: 768px) {
+  .footer img[src*="logo2.png"],
+  .footer img.footer-logo,
+  footer img.footer-logo,
+  .footer-logo,
+  footer .footer-logo,
+  .footer .footer-logo {
+    max-width: 60px !important;
+    width: 60px !important;
+    height: auto !important;
+    object-fit: contain !important;
+    flex-shrink: 0 !important;
+    overflow: hidden !important;
+    transform: scale(1) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer img[src*="logo2.png"],
+  .footer img.footer-logo,
+  footer img.footer-logo,
+  .footer-logo,
+  footer .footer-logo,
+  .footer .footer-logo {
+    max-width: 50px !important;
+    width: 50px !important;
+    height: auto !important;
+    object-fit: contain !important;
+    flex-shrink: 0 !important;
+    overflow: hidden !important;
+    transform: scale(1) !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer img[src*="logo2.png"],
+  .footer img.footer-logo,
+  footer img.footer-logo,
+  .footer-logo,
+  footer .footer-logo,
+  .footer .footer-logo {
+    max-width: 40px !important;
+    width: 40px !important;
+    height: auto !important;
+    object-fit: contain !important;
+    flex-shrink: 0 !important;
+    overflow: hidden !important;
+    transform: scale(1) !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer img[src*="logo2.png"],
+  .footer img.footer-logo,
+  footer img.footer-logo,
+  .footer-logo,
+  footer .footer-logo,
+  .footer .footer-logo {
+    max-width: 35px !important;
+    width: 35px !important;
+    height: auto !important;
+    object-fit: contain !important;
+    flex-shrink: 0 !important;
+    overflow: hidden !important;
+    transform: scale(1) !important;
   }
 }
 
