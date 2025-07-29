@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="../blog.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <title>Blog - Alex Vandusen</title>
+  <meta name="description" content="Insights on web development, learning experiences, and industry thoughts from Alex Vandusen's journey as a developer.">
 </head>
 <body>
   <!-- Navigation -->
@@ -49,14 +50,39 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero blog-hero">
-    <div class="hero-container">
-      <div class="hero-content">
-        <h1 class="hero-title">My <span class="highlight">Blog</span></h1>
-        <p class="hero-description">
-          Thoughts on web development, learning experiences, and insights from my journey 
-          as a developer. Sharing knowledge and documenting my growth.
-        </p>
+  <section class="blog-hero">
+    <div class="container">
+      <div class="blog-hero-content">
+        <div class="blog-hero-text">
+          <h1 class="blog-hero-title">
+            Developer <span class="highlight">Insights</span> & 
+            <span class="highlight">Experiences</span>
+          </h1>
+          <p class="blog-hero-description">
+            Sharing my journey in web development, from learning new technologies 
+            to building real-world projects. Join me as I explore the ever-evolving 
+            landscape of modern web development.
+          </p>
+          <div class="blog-hero-stats">
+            <div class="stat">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Articles</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">10k+</span>
+              <span class="stat-label">Readers</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Years</span>
+            </div>
+          </div>
+        </div>
+        <div class="blog-hero-visual">
+          <div class="blog-hero-image">
+            <img src="../assets/bloglogo.png" alt="Blog Visual" />
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -64,12 +90,38 @@
   <!-- Blog Categories -->
   <section class="blog-categories">
     <div class="container">
-      <div class="categories-container">
-        <button class="category-btn active" data-category="all">All Posts</button>
-        <button class="category-btn" data-category="web-development">Web Development</button>
-        <button class="category-btn" data-category="learning">Learning</button>
-        <button class="category-btn" data-category="tutorials">Tutorials</button>
-        <button class="category-btn" data-category="thoughts">Thoughts</button>
+      <div class="categories-wrapper">
+        <div class="categories-header">
+          <h2>Explore Topics</h2>
+          <p>Filter articles by category to find exactly what you're looking for</p>
+        </div>
+        <div class="categories-container">
+          <button class="category-btn active" data-category="all">
+            <span class="category-icon">📚</span>
+            <span class="category-text">All Posts</span>
+            <span class="category-count">12</span>
+          </button>
+          <button class="category-btn" data-category="web-development">
+            <span class="category-icon">💻</span>
+            <span class="category-text">Web Development</span>
+            <span class="category-count">5</span>
+          </button>
+          <button class="category-btn" data-category="learning">
+            <span class="category-icon">🎓</span>
+            <span class="category-text">Learning</span>
+            <span class="category-count">3</span>
+          </button>
+          <button class="category-btn" data-category="tutorials">
+            <span class="category-icon">📖</span>
+            <span class="category-text">Tutorials</span>
+            <span class="category-count">2</span>
+          </button>
+          <button class="category-btn" data-category="thoughts">
+            <span class="category-icon">💭</span>
+            <span class="category-text">Thoughts</span>
+            <span class="category-count">2</span>
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -77,137 +129,211 @@
   <!-- Blog Posts -->
   <section class="blog-posts">
     <div class="container">
-      <div class="blog-grid">
-        <!-- Featured Post -->
-        <article class="blog-card featured" data-category="web-development">
-          <div class="blog-image">
-            <img src="../assets/bloglogo.png" alt="Getting Started with Web Development" />
-            <div class="blog-overlay">
-              <span class="featured-badge">Featured</span>
-            </div>
-          </div>
-          <div class="blog-content">
-            <div class="blog-meta">
-              <span class="blog-category">Web Development</span>
-              <span class="blog-date">March 15, 2024</span>
-            </div>
-            <h2>Getting Started with Web Development: A Beginner's Guide</h2>
-            <p>Starting your journey in web development can be overwhelming. Here's my comprehensive guide to help you navigate the learning path and build your first projects.</p>
-            <div class="blog-tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">Beginner</span>
-            </div>
-            <a href="post.html" class="read-more">Read Full Article →</a>
-          </div>
-        </article>
+      <div class="blog-content-wrapper">
+        <div class="blog-main">
+          <div class="blog-grid">
+            <!-- Featured Post Placeholder -->
+            <article class="blog-card featured" data-category="web-development">
+              <div class="blog-image">
+                <img src="../assets/bloglogo.png" alt="Getting Started with Web Development" />
+                <div class="blog-overlay">
+                  <span class="featured-badge">Featured</span>
+                </div>
+              </div>
+              <div class="blog-content">
+                <div class="blog-meta">
+                  <span class="blog-category">Web Development</span>
+                  <span class="blog-date">March 15, 2024</span>
+                </div>
+                <h2>Getting Started with Web Development: A Complete Beginner's Guide</h2>
+                <p>Starting your journey in web development can be overwhelming. Here's my comprehensive guide to help you navigate the learning path, choose the right technologies, and build your first projects with confidence.</p>
+                <div class="blog-tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">Beginner</span>
+                </div>
+                <a href="post.html" class="read-more">Read Full Article →</a>
+              </div>
+            </article>
 
-        <!-- Regular Posts -->
-        <article class="blog-card" data-category="learning">
-          <div class="blog-image">
-            <img src="../assets/bloglogo.png" alt="Learning JavaScript" />
-          </div>
-          <div class="blog-content">
-            <div class="blog-meta">
-              <span class="blog-category">Learning</span>
-              <span class="blog-date">March 10, 2024</span>
-            </div>
-            <h3>My JavaScript Learning Journey: From Basics to Advanced Concepts</h3>
-            <p>Reflecting on my path learning JavaScript, the challenges I faced, and the resources that helped me most along the way.</p>
-            <div class="blog-tags">
-              <span class="tag">JavaScript</span>
-              <span class="tag">Learning</span>
-              <span class="tag">Resources</span>
-            </div>
-            <a href="post.html" class="read-more">Read More →</a>
-          </div>
-        </article>
+            <!-- Regular Posts Placeholders -->
+            <article class="blog-card" data-category="learning">
+              <div class="blog-image">
+                <img src="../assets/bloglogo.png" alt="Learning JavaScript" />
+              </div>
+              <div class="blog-content">
+                <div class="blog-meta">
+                  <span class="blog-category">Learning</span>
+                  <span class="blog-date">March 10, 2024</span>
+                </div>
+                <h3>My JavaScript Learning Journey: From Basics to Advanced Concepts</h3>
+                <p>Reflecting on my path learning JavaScript, the challenges I faced, and the resources that helped me most along the way.</p>
+                <div class="blog-tags">
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">Learning</span>
+                  <span class="tag">Resources</span>
+                </div>
+                <a href="post.html" class="read-more">Read More →</a>
+              </div>
+            </article>
 
-        <article class="blog-card" data-category="tutorials">
-          <div class="blog-image">
-            <img src="../assets/bloglogo.png" alt="CSS Grid Tutorial" />
-          </div>
-          <div class="blog-content">
-            <div class="blog-meta">
-              <span class="blog-category">Tutorials</span>
-              <span class="blog-date">March 5, 2024</span>
-            </div>
-            <h3>Mastering CSS Grid: A Complete Tutorial</h3>
-            <p>Learn how to create responsive layouts with CSS Grid. This comprehensive tutorial covers everything from basic concepts to advanced techniques.</p>
-            <div class="blog-tags">
-              <span class="tag">CSS</span>
-              <span class="tag">Grid</span>
-              <span class="tag">Layout</span>
-            </div>
-            <a href="post.html" class="read-more">Read More →</a>
-          </div>
-        </article>
+            <article class="blog-card" data-category="tutorials">
+              <div class="blog-image">
+                <img src="../assets/bloglogo.png" alt="CSS Grid Tutorial" />
+              </div>
+              <div class="blog-content">
+                <div class="blog-meta">
+                  <span class="blog-category">Tutorials</span>
+                  <span class="blog-date">March 5, 2024</span>
+                </div>
+                <h3>Mastering CSS Grid: A Complete Tutorial</h3>
+                <p>Learn how to create responsive layouts with CSS Grid. This comprehensive tutorial covers everything from basic concepts to advanced techniques.</p>
+                <div class="blog-tags">
+                  <span class="tag">CSS</span>
+                  <span class="tag">Grid</span>
+                  <span class="tag">Layout</span>
+                </div>
+                <a href="post.html" class="read-more">Read More →</a>
+              </div>
+            </article>
 
-        <article class="blog-card" data-category="thoughts">
-          <div class="blog-image">
-            <img src="../assets/bloglogo.png" alt="Career Transition" />
-          </div>
-          <div class="blog-content">
-            <div class="blog-meta">
-              <span class="blog-category">Thoughts</span>
-              <span class="blog-date">February 28, 2024</span>
-            </div>
-            <h3>Transitioning from Service Industry to Tech: Lessons Learned</h3>
-            <p>Sharing my experience transitioning from a service industry background to pursuing a career in web development.</p>
-            <div class="blog-tags">
-              <span class="tag">Career</span>
-              <span class="tag">Transition</span>
-              <span class="tag">Experience</span>
-            </div>
-            <a href="post.html" class="read-more">Read More →</a>
-          </div>
-        </article>
+            <article class="blog-card" data-category="thoughts">
+              <div class="blog-image">
+                <img src="../assets/bloglogo.png" alt="Career Transition" />
+              </div>
+              <div class="blog-content">
+                <div class="blog-meta">
+                  <span class="blog-category">Thoughts</span>
+                  <span class="blog-date">February 28, 2024</span>
+                </div>
+                <h3>Transitioning from Service Industry to Tech: Lessons Learned</h3>
+                <p>Sharing my experience transitioning from a service industry background to pursuing a career in web development.</p>
+                <div class="blog-tags">
+                  <span class="tag">Career</span>
+                  <span class="tag">Transition</span>
+                  <span class="tag">Experience</span>
+                </div>
+                <a href="post.html" class="read-more">Read More →</a>
+              </div>
+            </article>
 
-        <article class="blog-card" data-category="web-development">
-          <div class="blog-image">
-            <img src="../assets/bloglogo.png" alt="Responsive Design" />
-          </div>
-          <div class="blog-content">
-            <div class="blog-meta">
-              <span class="blog-category">Web Development</span>
-              <span class="blog-date">February 20, 2024</span>
-            </div>
-            <h3>Building Responsive Websites: Best Practices and Common Pitfalls</h3>
-            <p>Essential tips and techniques for creating websites that work perfectly on all devices, plus common mistakes to avoid.</p>
-            <div class="blog-tags">
-              <span class="tag">Responsive</span>
-              <span class="tag">Design</span>
-              <span class="tag">Mobile</span>
-            </div>
-            <a href="post.html" class="read-more">Read More →</a>
-          </div>
-        </article>
+            <article class="blog-card" data-category="web-development">
+              <div class="blog-image">
+                <img src="../assets/bloglogo.png" alt="Responsive Design" />
+              </div>
+              <div class="blog-content">
+                <div class="blog-meta">
+                  <span class="blog-category">Web Development</span>
+                  <span class="blog-date">February 20, 2024</span>
+                </div>
+                <h3>Building Responsive Websites: Best Practices and Common Pitfalls</h3>
+                <p>Essential tips and techniques for creating websites that work perfectly on all devices, plus common mistakes to avoid.</p>
+                <div class="blog-tags">
+                  <span class="tag">Responsive</span>
+                  <span class="tag">Design</span>
+                  <span class="tag">Mobile</span>
+                </div>
+                <a href="post.html" class="read-more">Read More →</a>
+              </div>
+            </article>
 
-        <article class="blog-card" data-category="learning">
-          <div class="blog-image">
-            <img src="../assets/bloglogo.png" alt="Project Management" />
+            <article class="blog-card" data-category="learning">
+              <div class="blog-image">
+                <img src="../assets/bloglogo.png" alt="Project Management" />
+              </div>
+              <div class="blog-content">
+                <div class="blog-meta">
+                  <span class="blog-category">Learning</span>
+                  <span class="blog-date">February 15, 2024</span>
+                </div>
+                <h3>Project Management for Solo Developers</h3>
+                <p>How I organize and manage my development projects as a solo developer, including tools and methodologies that work for me.</p>
+                <div class="blog-tags">
+                  <span class="tag">Project Management</span>
+                  <span class="tag">Productivity</span>
+                  <span class="tag">Tools</span>
+                </div>
+                <a href="post.html" class="read-more">Read More →</a>
+              </div>
+            </article>
           </div>
-          <div class="blog-content">
-            <div class="blog-meta">
-              <span class="blog-category">Learning</span>
-              <span class="blog-date">February 15, 2024</span>
-            </div>
-            <h3>Project Management for Solo Developers</h3>
-            <p>How I organize and manage my development projects as a solo developer, including tools and methodologies that work for me.</p>
-            <div class="blog-tags">
-              <span class="tag">Project Management</span>
-              <span class="tag">Productivity</span>
-              <span class="tag">Tools</span>
-            </div>
-            <a href="post.html" class="read-more">Read More →</a>
-          </div>
-        </article>
-      </div>
 
-      <!-- Load More Button -->
-      <div class="load-more-container">
-        <button class="btn btn-outline load-more-btn">Load More Posts</button>
+          <!-- Load More Button -->
+          <div class="load-more-container">
+            <button class="btn btn-outline load-more-btn">
+              <span class="btn-text">Load More Posts</span>
+              <span class="btn-icon">↓</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Blog Sidebar -->
+        <aside class="blog-sidebar">
+          <div class="sidebar-widget">
+            <h3>Popular Posts</h3>
+            <div class="popular-posts">
+              <a href="post.html" class="popular-post">
+                <div class="popular-post-image">
+                  <img src="../assets/bloglogo.png" alt="Popular Post" />
+                </div>
+                <div class="popular-post-content">
+                  <h4>Getting Started with Web Development</h4>
+                  <span class="popular-post-date">March 15, 2024</span>
+                </div>
+              </a>
+              <a href="post.html" class="popular-post">
+                <div class="popular-post-image">
+                  <img src="../assets/bloglogo.png" alt="Popular Post" />
+                </div>
+                <div class="popular-post-content">
+                  <h4>Mastering CSS Grid</h4>
+                  <span class="popular-post-date">March 5, 2024</span>
+                </div>
+              </a>
+              <a href="post.html" class="popular-post">
+                <div class="popular-post-image">
+                  <img src="../assets/bloglogo.png" alt="Popular Post" />
+                </div>
+                <div class="popular-post-content">
+                  <h4>JavaScript Learning Journey</h4>
+                  <span class="popular-post-date">March 10, 2024</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3>Categories</h3>
+            <div class="sidebar-categories">
+              <a href="#" class="sidebar-category">
+                <span class="category-name">Web Development</span>
+                <span class="category-count">5</span>
+              </a>
+              <a href="#" class="sidebar-category">
+                <span class="category-name">Learning</span>
+                <span class="category-count">3</span>
+              </a>
+              <a href="#" class="sidebar-category">
+                <span class="category-name">Tutorials</span>
+                <span class="category-count">2</span>
+              </a>
+              <a href="#" class="sidebar-category">
+                <span class="category-name">Thoughts</span>
+                <span class="category-count">2</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3>Newsletter</h3>
+            <p>Get the latest posts delivered to your inbox</p>
+            <form class="sidebar-newsletter">
+              <input type="email" placeholder="Your email address" required>
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </aside>
       </div>
     </div>
   </section>
@@ -216,14 +342,33 @@
   <section class="newsletter-section">
     <div class="container">
       <div class="newsletter-content">
-        <h2>Stay Updated</h2>
-        <p>Get notified when I publish new articles about web development, learning experiences, and industry insights.</p>
+        <div class="newsletter-text">
+          <h2>Stay Updated with My Journey</h2>
+          <p>Join hundreds of developers who get weekly insights on web development, learning strategies, and industry trends. No spam, just valuable content.</p>
+          <div class="newsletter-benefits">
+            <div class="benefit">
+              <span class="benefit-icon">📧</span>
+              <span class="benefit-text">Weekly insights</span>
+            </div>
+            <div class="benefit">
+              <span class="benefit-icon">🚫</span>
+              <span class="benefit-text">No spam</span>
+            </div>
+            <div class="benefit">
+              <span class="benefit-icon">🔒</span>
+              <span class="benefit-text">Unsubscribe anytime</span>
+            </div>
+          </div>
+        </div>
         <form class="newsletter-form">
           <div class="newsletter-input-group">
             <input type="email" placeholder="Enter your email address" required>
-            <button type="submit" class="btn btn-primary">Subscribe</button>
+            <button type="submit" class="btn btn-primary">
+              <span class="btn-text">Subscribe</span>
+              <span class="btn-icon">→</span>
+            </button>
           </div>
-          <p class="newsletter-note">No spam, unsubscribe at any time.</p>
+          <p class="newsletter-note">Join 500+ developers already subscribed</p>
         </form>
       </div>
     </div>

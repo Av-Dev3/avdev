@@ -208,7 +208,7 @@ p {
   width: 40px;
   height: 40px;
   border-radius: var(--radius-md);
-  background: var(--bg-secondary);
+  background: var(--bg-dark);
   transition: all var(--transition-normal);
 }
 
@@ -829,8 +829,8 @@ footer .footer-social img,
   .footer img.footer-logo,
   footer img.footer-logo,
   .footer img[src*="logo2.png"] {
-    max-width: 60px !important;
-    width: 60px !important;
+    max-width: 80px !important;
+    width: 80px !important;
     height: auto !important;
     object-fit: contain !important;
     flex-shrink: 0 !important;
@@ -901,8 +901,8 @@ footer .footer-social img,
   .footer img.footer-logo,
   footer img.footer-logo,
   .footer img[src*="logo2.png"] {
-    max-width: 50px !important;
-    width: 50px !important;
+    max-width: 70px !important;
+    width: 70px !important;
     height: auto !important;
     object-fit: contain !important;
     flex-shrink: 0 !important;
@@ -939,8 +939,8 @@ footer .footer-social img,
   .footer img.footer-logo,
   footer img.footer-logo,
   .footer img[src*="logo2.png"] {
-    max-width: 40px !important;
-    width: 40px !important;
+    max-width: 60px !important;
+    width: 60px !important;
     height: auto !important;
     object-fit: contain !important;
     flex-shrink: 0 !important;
@@ -977,8 +977,8 @@ footer .footer-social img,
   .footer img.footer-logo,
   footer img.footer-logo,
   .footer img[src*="logo2.png"] {
-    max-width: 35px !important;
-    width: 35px !important;
+    max-width: 50px !important;
+    width: 50px !important;
     height: auto !important;
     object-fit: contain !important;
     flex-shrink: 0 !important;
