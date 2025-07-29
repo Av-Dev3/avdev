@@ -3,44 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog post - Alex Vandusen's Developer Portfolio">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../post.css">
- 
-
-  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Blog Post - Alex Vandusen</title>
 </head>
 <body>
-  <header class="head">
-    <img class="logo" src="../assets/logo2.png" alt="" />
-    <nav class="main">
-      <ul class="nav-list">
-        <li class="items"><a href="../index.html">Home</a></li>
-        <li class="items"><a href="../Public/projects.html">Portfolio</a></li>
-        <li class="items"><a href="../Public/about.html">About</a></li>
-        <li class="items"><a href="../Public/contact.html">Contact</a></li>
-        <li class="items"><a href="../Public/blog.html">Blog</a></li>
-      </ul>
-    </nav>
-    <div class="right-item">
-    <nav class="social_nav">
-      <ul>
-        <li class="socials">
-          <a class="git" href="https://github.com/Av-Dev3"
-            ><img id="git_js" class="social_img" src="../assets/GitHub_Invertocat_Light.png"
-          /></a>
-        </li>
-        <li class="socials"><a class="git" href="https://codepen.io/Alex-Vandusen"><img id="codepen" class="social_img" src="../assets/logo-white.png" alt=""></a></li>
-      </ul>
-    </nav>
-    <span class="hamburger">☰</span>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="../index.html">
+          <img src="../assets/logo2.png" alt="Alex Vandusen" />
+        </a>
+      </div>
+      
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="projects.html" class="nav-link">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link">Blog</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav-social">
+        <a href="https://github.com/Av-Dev3" class="social-link" aria-label="GitHub">
+          <img src="../assets/GitHub_Invertocat_Light.png" alt="GitHub" />
+        </a>
+        <a href="https://codepen.io/Alex-Vandusen" class="social-link" aria-label="CodePen">
+          <img src="../assets/logo-white.png" alt="CodePen" />
+        </a>
+      </div>
+
+      <div class="nav-toggle" id="nav-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <main id="main-post">
-    <div id="post-container">
-
+  <!-- Main Content -->
+  <main class="post-main">
+    <div class="post-container">
+      <div id="post-content">
+        <!-- Post content will be dynamically loaded here -->
+        <div class="post-loading">
+          <div class="loading-spinner"></div>
+          <p>Loading post...</p>
+        </div>
+      </div>
     </div>
   </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Alex Vandusen</h3>
+          <p>Full-stack developer passionate about creating meaningful digital experiences.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="projects.html">Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <div class="footer-social">
+            <a href="https://github.com/Av-Dev3" aria-label="GitHub">
+              <img src="../assets/GitHub_Invertocat_Light.png" alt="GitHub" />
+            </a>
+            <a href="https://codepen.io/Alex-Vandusen" aria-label="CodePen">
+              <img src="../assets/logo-white.png" alt="CodePen" />
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 Alex Vandusen. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
   <script src="../posts.js"></script>
   <script src="../script.js"></script>
 </body>

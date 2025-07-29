@@ -4,56 +4,349 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>AvDev Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Alex Vandusen - Full Stack Developer</title>
   </head>
   <body>
-    <header class="head">
-      <img class="logo" src="assets/logo2.png" alt="" />
-      <nav class="main" id="nav">
-        <ul class="nav-list">
-          <li class="items"><a href="index.html">Home</a></li>
-          <li class="items"><a href="Public/projects.html">Portfolio</a></li>
-          <li class="items"><a href="Public/about.html">About</a></li>
-          <li class="items"><a href="Public/contact.html">Contact</a></li>
-          <li class="items"><a href="Public/blog.html">Blog</a></li>
-        </ul>
-      </nav>
-      <div class="right-item">
-      <nav class="social_nav">
-        
-        <ul>
-          <li class="socials">
-            <a class="git" href="https://github.com/Av-Dev3"
-              ><img id="git_js" class="social_img" src="assets/GitHub_Invertocat_Light.png"
-            /></a>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <img src="assets/logo2.png" alt="AvDev" />
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link active">Home</a>
           </li>
-          <li class="socials"><a class="git" href="https://codepen.io/Alex-Vandusen"><img id="codepen" class="social_img" src="assets/logo-white.png" alt=""></a></li>
+          <li class="nav-item">
+            <a href="Public/projects.html" class="nav-link">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a href="Public/about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="Public/contact.html" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="Public/blog.html" class="nav-link">Blog</a>
+          </li>
         </ul>
-           
-      </nav>
-      <span class="hamburger">☰</span>
+        <div class="nav-social">
+          <a href="https://github.com/Av-Dev3" class="social-link" target="_blank">
+            <img src="assets/GitHub_Invertocat_Light.png" alt="GitHub" />
+          </a>
+          <a href="https://codepen.io/Alex-Vandusen" class="social-link" target="_blank">
+            <img src="assets/logo-white.png" alt="CodePen" />
+          </a>
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
-    </header>
-    <main id="main_main">
-      <section id="main_sect">
-        <h1>Web development</h1>
-        <img id="skills" src="skills.png" alt="">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-          tempore praesentium vero doloribus voluptas vitae asperiores molestias
-          nesciunt iusto fugit. Voluptas sed vitae aut laborum, tenetur quod
-          sint consequuntur qui.
-        </p>
-      </section>
-    </main>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight">Alex Vandusen</span>
+          </h1>
+          <h2 class="hero-subtitle">Full Stack Web Developer</h2>
+          <p class="hero-description">
+            Transforming ideas into elegant, functional web experiences. 
+            From frontend finesse to backend brilliance, I craft digital solutions that make a difference.
+          </p>
+          <div class="hero-cta">
+            <a href="Public/projects.html" class="btn btn-primary">View My Work</a>
+            <a href="Public/contact.html" class="btn btn-secondary">Get In Touch</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="skills.png" alt="Development Skills" class="hero-image" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section class="about-preview">
+      <div class="container">
+        <div class="section-header">
+          <h2>About Me</h2>
+          <p>From service industry to software development</p>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              After nine years in the service industry, I've learned to stay calm under pressure, 
+              solve problems fast, and handle any situation. But my true passion has always been technology.
+            </p>
+            <p>
+              I'm now focused on becoming a full stack web developer, building projects with HTML, CSS, 
+              JavaScript, and exploring backend tools like Supabase. I believe in building in public and 
+              continuous improvement.
+            </p>
+            <a href="Public/about.html" class="btn btn-outline">Learn More</a>
+          </div>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">2+</span>
+              <span class="stat-label">Years Learning</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Dedicated</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+      <div class="container">
+        <div class="section-header">
+          <h2>Skills & Technologies</h2>
+          <p>Tools and technologies I work with</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Frontend</h3>
+            <div class="skill-items">
+              <span class="skill-item">HTML5</span>
+              <span class="skill-item">CSS3</span>
+              <span class="skill-item">JavaScript</span>
+              <span class="skill-item">React</span>
+              <span class="skill-item">Responsive Design</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Backend</h3>
+            <div class="skill-items">
+              <span class="skill-item">Node.js</span>
+              <span class="skill-item">Supabase</span>
+              <span class="skill-item">REST APIs</span>
+              <span class="skill-item">Database Design</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Tools</h3>
+            <div class="skill-items">
+              <span class="skill-item">Git</span>
+              <span class="skill-item">VS Code</span>
+              <span class="skill-item">Figma</span>
+              <span class="skill-item">Postman</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>What I Do</h2>
+          <p>Services I offer to help bring your ideas to life</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">💻</div>
+            <h3>Web Development</h3>
+            <p>Building responsive, modern websites and web applications from concept to deployment.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🎨</div>
+            <h3>UI/UX Design</h3>
+            <p>Creating intuitive user interfaces and seamless user experiences that engage and convert.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">⚡</div>
+            <h3>Performance Optimization</h3>
+            <p>Optimizing websites for speed, accessibility, and search engine visibility.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🔧</div>
+            <h3>Maintenance & Support</h3>
+            <p>Ongoing website maintenance, updates, and technical support to keep your site running smoothly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="featured-projects">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Projects</h2>
+          <p>A glimpse of my recent work</p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/reptileproject.png" alt="Reptile Fantasy" />
+            </div>
+            <div class="project-content">
+              <h3>Reptile Fantasy</h3>
+              <p>An interactive web application showcasing reptile information and care guides.</p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <a href="reptifanta/index.html" class="btn btn-sm">View Project</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/habitproject.png" alt="Habit Tracker" />
+            </div>
+            <div class="project-content">
+              <h3>Habit Tracker</h3>
+              <p>A productivity tool to help build and maintain positive daily habits.</p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <a href="habit/index.html" class="btn btn-sm">View Project</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img src="todo/todolist.png" alt="To-Do List" />
+            </div>
+            <div class="project-content">
+              <h3>To-Do List</h3>
+              <p>A clean and efficient task management application for daily productivity.</p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <a href="todo/index.html" class="btn btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="projects-cta">
+          <a href="Public/projects.html" class="btn btn-primary">View All Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2>What People Say</h2>
+          <p>Feedback from clients and colleagues</p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>"Alex has a great eye for detail and delivers clean, efficient code. His problem-solving skills are exceptional."</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4>Sarah Johnson</h4>
+                <span>Project Manager</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>"Working with Alex was a pleasure. He's responsive, professional, and truly cares about delivering quality work."</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4>Mike Chen</h4>
+                <span>Startup Founder</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>"Alex's dedication to learning and improving his skills is inspiring. He's always up for a challenge."</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4>Emily Rodriguez</h4>
+                <span>Senior Developer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready to Start Your Project?</h2>
+          <p>Let's discuss how I can help bring your vision to life</p>
+          <a href="Public/contact.html" class="btn btn-primary">Get In Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
-      <h5>Copyright</h5>
-      <nav class="footer_nav">
-        <li><a href="#">Faq</a></li>
-        <li><a href="#">terms</a></li>
-      </nav>
-      <span class="footer_space"></span>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <img src="assets/logo2.png" alt="AvDev" class="footer-logo" />
+            <p>Building digital experiences that matter.</p>
+            <div class="footer-social">
+              <a href="https://github.com/Av-Dev3" target="_blank">
+                <img src="assets/GitHub_Invertocat_Light.png" alt="GitHub" />
+              </a>
+              <a href="https://codepen.io/Alex-Vandusen" target="_blank">
+                <img src="assets/logo-white.png" alt="CodePen" />
+              </a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="Public/projects.html">Portfolio</a></li>
+              <li><a href="Public/about.html">About</a></li>
+              <li><a href="Public/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul>
+              <li>Web Development</li>
+              <li>UI/UX Design</li>
+              <li>Performance Optimization</li>
+              <li>Maintenance & Support</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <p>📍 Available for remote work</p>
+            <p>📧 alex@example.com</p>
+            <p>📱 (555) 123-4567</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Alex Vandusen. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

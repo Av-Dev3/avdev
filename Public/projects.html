@@ -4,63 +4,416 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
-   
-
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Portfolio - Alex Vandusen</title>
   </head>
   <body>
-  <header class="head">
-      <img class="logo" src="../assets/logo2.png" alt="" />
-      <nav class="main" id="nav">
-        <ul class="nav-list">
-          <li class="items"><a href="../index.html">Home</a></li>
-          <li class="items"><a href="../Public/projects.html">Portfolio</a></li>
-          <li class="items"><a href="../Public/about.html">About</a></li>
-          <li class="items"><a href="../Public/contact.html">Contact</a></li>
-          <li class="items"><a href="../Public/blog.html">Blog</a></li>
-        </ul>
-      </nav>
-      <div class="right-item">
-      <nav class="social_nav">
-        <ul>
-          <li class="socials">
-            <a class="git" href="https://github.com/Av-Dev3"
-              ><img id="git_js" class="social_img" src="../assets/GitHub_Invertocat_Light.png"
-            /></a>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <img src="../assets/logo2.png" alt="AvDev" />
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">Home</a>
           </li>
-          <li class="socials"><a class="git" href="https://codepen.io/Alex-Vandusen"><img id="codepen" class="social_img" src="../assets/logo-white.png" alt=""></a></li>
+          <li class="nav-item">
+            <a href="../Public/projects.html" class="nav-link active">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a href="../Public/about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="../Public/contact.html" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="../Public/blog.html" class="nav-link">Blog</a>
+          </li>
         </ul>
-        
-      </nav>
-      <span class="hamburger">☰</span>
+        <div class="nav-social">
+          <a href="https://github.com/Av-Dev3" class="social-link" target="_blank">
+            <img src="../assets/GitHub_Invertocat_Light.png" alt="GitHub" />
+          </a>
+          <a href="https://codepen.io/Alex-Vandusen" class="social-link" target="_blank">
+            <img src="../assets/logo-white.png" alt="CodePen" />
+          </a>
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
-    </header>
-    <main id="port_main">
-      <h1>My Projects</h1>
-      <section class="sect_port">
-        <article class="articles" id="reptile-fantasy">
-          <img class="port_pic" src="../assets/reptileproject.png" alt="" />
-          <h2>Reptile Fantasy</h2>
-          <a class="a_port_links" href="../reptifanta/index.html"
-            >Click Here To View</a
-          >
-         
-        </article>
-        <article class="articles" id="habit-tracker">
-          <img class="port_pic" src="../assets/habitproject.png" alt="" />
-          <h2>Habit Tracker</h2>
-          <a class="a_port_links" href="../habit/index.html"
-            >Click Here To View</a
-          >
-      
-        </article>
-        <article class="articles" id="to-do-list">
-          <img class="port_pic" src="../todo/todolist.png" alt="">
-          <h2>To-Do-List</h2>
-          <a class="a_port_links" href="../todo/index.html">Click Here to View</a>
-        </article>
-      </section>
-    </main>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero portfolio-hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">My <span class="highlight">Portfolio</span></h1>
+          <p class="hero-description">
+            A collection of projects that showcase my skills and passion for web development. 
+            Each project represents a step in my learning journey.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Filters -->
+    <section class="project-filters">
+      <div class="container">
+        <div class="filters-container">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="frontend">Frontend</button>
+          <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+          <button class="filter-btn" data-filter="productivity">Productivity</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="portfolio-projects">
+      <div class="container">
+        <div class="projects-grid">
+          <!-- Reptile Fantasy Project -->
+          <div class="project-card" data-category="frontend">
+            <div class="project-image">
+              <img src="../assets/reptileproject.png" alt="Reptile Fantasy" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="../reptifanta/index.html" class="project-link" target="_blank">
+                    <span>View Live</span>
+                  </a>
+                  <a href="#" class="project-link">
+                    <span>View Code</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Reptile Fantasy</h3>
+              <p>An interactive web application showcasing comprehensive reptile information, care guides, and species database. Features a modern, responsive design with intuitive navigation.</p>
+              <div class="project-tech">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>Responsive Design</span>
+              </div>
+              <div class="project-features">
+                <h4>Key Features:</h4>
+                <ul>
+                  <li>Interactive species database</li>
+                  <li>Care guides and tips</li>
+                  <li>Responsive design</li>
+                  <li>User-friendly navigation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Habit Tracker Project -->
+          <div class="project-card" data-category="productivity">
+            <div class="project-image">
+              <img src="../assets/habitproject.png" alt="Habit Tracker" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="../habit/index.html" class="project-link" target="_blank">
+                    <span>View Live</span>
+                  </a>
+                  <a href="#" class="project-link">
+                    <span>View Code</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Habit Tracker</h3>
+              <p>A comprehensive productivity tool designed to help users build and maintain positive daily habits. Features progress tracking, streak counting, and motivational elements.</p>
+              <div class="project-tech">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>Local Storage</span>
+              </div>
+              <div class="project-features">
+                <h4>Key Features:</h4>
+                <ul>
+                  <li>Habit creation and tracking</li>
+                  <li>Progress visualization</li>
+                  <li>Streak counting</li>
+                  <li>Data persistence</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- To-Do List Project -->
+          <div class="project-card" data-category="productivity">
+            <div class="project-image">
+              <img src="../todo/todolist.png" alt="To-Do List" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="../todo/index.html" class="project-link" target="_blank">
+                    <span>View Live</span>
+                  </a>
+                  <a href="#" class="project-link">
+                    <span>View Code</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>To-Do List</h3>
+              <p>A clean and efficient task management application for daily productivity. Features drag-and-drop functionality, priority levels, and deadline tracking.</p>
+              <div class="project-tech">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>Drag & Drop</span>
+              </div>
+              <div class="project-features">
+                <h4>Key Features:</h4>
+                <ul>
+                  <li>Task creation and management</li>
+                  <li>Priority levels</li>
+                  <li>Deadline tracking</li>
+                  <li>Drag and drop interface</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- E-commerce Platform (Coming Soon) -->
+          <div class="project-card coming-soon" data-category="fullstack">
+            <div class="project-image">
+              <div class="coming-soon-overlay">
+                <span>🚧</span>
+                <h3>Coming Soon</h3>
+                <p>E-commerce Platform</p>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>E-commerce Platform</h3>
+              <p>A full-stack e-commerce solution with user authentication, product management, shopping cart, and payment integration.</p>
+              <div class="project-tech">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+                <span>Stripe API</span>
+              </div>
+              <div class="project-features">
+                <h4>Planned Features:</h4>
+                <ul>
+                  <li>User authentication</li>
+                  <li>Product catalog</li>
+                  <li>Shopping cart</li>
+                  <li>Payment processing</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Weather App (Coming Soon) -->
+          <div class="project-card coming-soon" data-category="frontend">
+            <div class="project-image">
+              <div class="coming-soon-overlay">
+                <span>🌤️</span>
+                <h3>Coming Soon</h3>
+                <p>Weather Dashboard</p>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Weather Dashboard</h3>
+              <p>A beautiful weather application with real-time data, 7-day forecasts, and location-based weather information.</p>
+              <div class="project-tech">
+                <span>React</span>
+                <span>Weather API</span>
+                <span>Geolocation</span>
+                <span>Charts.js</span>
+              </div>
+              <div class="project-features">
+                <h4>Planned Features:</h4>
+                <ul>
+                  <li>Real-time weather data</li>
+                  <li>7-day forecast</li>
+                  <li>Location detection</li>
+                  <li>Weather alerts</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Platform (Coming Soon) -->
+          <div class="project-card coming-soon" data-category="fullstack">
+            <div class="project-image">
+              <div class="coming-soon-overlay">
+                <span>📝</span>
+                <h3>Coming Soon</h3>
+                <p>Blog Platform</p>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Blog Platform</h3>
+              <p>A modern blog platform with content management, user authentication, comments system, and SEO optimization.</p>
+              <div class="project-tech">
+                <span>Next.js</span>
+                <span>Supabase</span>
+                <span>Markdown</span>
+                <span>SEO</span>
+              </div>
+              <div class="project-features">
+                <h4>Planned Features:</h4>
+                <ul>
+                  <li>Content management</li>
+                  <li>User authentication</li>
+                  <li>Comments system</li>
+                  <li>SEO optimization</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Showcase -->
+    <section class="skills-showcase">
+      <div class="container">
+        <div class="section-header">
+          <h2>Technologies I Use</h2>
+          <p>Tools and frameworks I work with to bring ideas to life</p>
+        </div>
+        <div class="skills-showcase-grid">
+          <div class="skill-category-showcase">
+            <h3>Frontend</h3>
+            <div class="skill-items-showcase">
+              <div class="skill-item-showcase">
+                <span class="skill-icon">🌐</span>
+                <span>HTML5</span>
+              </div>
+              <div class="skill-item-showcase">
+                <span class="skill-icon">🎨</span>
+                <span>CSS3</span>
+              </div>
+              <div class="skill-item-showcase">
+                <span class="skill-icon">⚡</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-item-showcase">
+                <span class="skill-icon">⚛️</span>
+                <span>React</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category-showcase">
+            <h3>Backend</h3>
+            <div class="skill-items-showcase">
+              <div class="skill-item-showcase">
+                <span class="skill-icon">🟢</span>
+                <span>Node.js</span>
+              </div>
+              <div class="skill-item-showcase">
+                <span class="skill-icon">🔥</span>
+                <span>Supabase</span>
+              </div>
+              <div class="skill-item-showcase">
+                <span class="skill-icon">🗄️</span>
+                <span>MongoDB</span>
+              </div>
+              <div class="skill-item-showcase">
+                <span class="skill-icon">🔌</span>
+                <span>REST APIs</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category-showcase">
+            <h3>Tools</h3>
+            <div class="skill-items-showcase">
+              <div class="skill-item-showcase">
+                <span class="skill-icon">📝</span>
+                <span>Git</span>
+              </div>
+              <div class="skill-item-showcase">
+                <span class="skill-icon">💻</span>
+                <span>VS Code</span>
+              </div>
+              <div class="skill-item-showcase">
+                <span class="skill-icon">🎨</span>
+                <span>Figma</span>
+              </div>
+              <div class="skill-item-showcase">
+                <span class="skill-icon">📡</span>
+                <span>Postman</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Interested in Working Together?</h2>
+          <p>Let's discuss your project and how I can help bring your vision to life</p>
+          <a href="../Public/contact.html" class="btn btn-primary">Start a Project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <img src="../assets/logo2.png" alt="AvDev" class="footer-logo" />
+            <p>Building digital experiences that matter.</p>
+            <div class="footer-social">
+              <a href="https://github.com/Av-Dev3" target="_blank">
+                <img src="../assets/GitHub_Invertocat_Light.png" alt="GitHub" />
+              </a>
+              <a href="https://codepen.io/Alex-Vandusen" target="_blank">
+                <img src="../assets/logo-white.png" alt="CodePen" />
+              </a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../Public/projects.html">Portfolio</a></li>
+              <li><a href="../Public/about.html">About</a></li>
+              <li><a href="../Public/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul>
+              <li>Web Development</li>
+              <li>UI/UX Design</li>
+              <li>Performance Optimization</li>
+              <li>Maintenance & Support</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <p>📍 Available for remote work</p>
+            <p>📧 alex@example.com</p>
+            <p>📱 (555) 123-4567</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Alex Vandusen. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script src="../script.js"></script>
   </body>
 </html>

@@ -4,87 +4,312 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>About Alex Vandusen - Full Stack Developer</title>
   </head>
   <body>
-    <header class="head">
-      <img class="logo" src="../assets/logo2.png" alt="" />
-      <nav class="main" id="nav">
-        <ul class="nav-list">
-          <li class="items"><a href="../index.html">Home</a></li>
-          <li class="items"><a href="../Public/projects.html">Portfolio</a></li>
-          <li class="items"><a href="../Public/about.html">About</a></li>
-          <li class="items"><a href="../Public/contact.html">Contact</a></li>
-          <li class="items"><a href="../Public/blog.html">Blog</a></li>
-        </ul>
-      </nav>
-      <div class="right-item">
-      <nav class="social_nav">
-        <ul>
-          <li class="socials">
-            <a class="git" href="https://github.com/Av-Dev3"
-              ><img
-                id="git_js"
-                class="social_img"
-                src="../assets/GitHub_Invertocat_Light.png"
-            /></a>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <img src="../assets/logo2.png" alt="AvDev" />
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">Home</a>
           </li>
-          <li class="socials">
-            <a class="git" href="https://codepen.io/Alex-Vandusen"
-              ><img
-                id="codepen"
-                class="social_img"
-                src="../assets/logo-white.png"
-                alt=""
-            /></a>
+          <li class="nav-item">
+            <a href="../Public/projects.html" class="nav-link">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a href="../Public/about.html" class="nav-link active">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="../Public/contact.html" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="../Public/blog.html" class="nav-link">Blog</a>
           </li>
         </ul>
-        
-      </nav>
-      <span class="hamburger">☰</span>
+        <div class="nav-social">
+          <a href="https://github.com/Av-Dev3" class="social-link" target="_blank">
+            <img src="../assets/GitHub_Invertocat_Light.png" alt="GitHub" />
+          </a>
+          <a href="https://codepen.io/Alex-Vandusen" class="social-link" target="_blank">
+            <img src="../assets/logo-white.png" alt="CodePen" />
+          </a>
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
-    </header>
-    <main id="about-main">
-      <section id="about_sect">
-        <article id="about_a">
-          <h1>About Me</h1>
-          <p>
-            Hi, I’m Alex. For the last nine years, I’ve worked in the service
-            industry, learning how to stay calm under pressure, solve problems
-            fast, and deal with just about every kind of situation you can
-            imagine. But behind the scenes, I’ve always been drawn to tech. I’d
-            stay up late tinkering with websites, teaching myself code, and
-            dreaming about doing this for real one day.
-          </p>
+    </nav>
 
-          <p>
-            That day finally came. I decided to stop treating this like a hobby
-            and start treating it like my future.
+    <!-- Hero Section -->
+    <section class="hero about-hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">About <span class="highlight">Alex</span></h1>
+          <p class="hero-description">
+            From service industry professional to passionate web developer, 
+            I'm on a journey to create meaningful digital experiences.
           </p>
+        </div>
+        <div class="hero-visual">
+          <div class="about-image-placeholder">
+            <div class="placeholder-content">
+              <span>👨‍💻</span>
+              <p>Your Photo Here</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <p>
-            Right now, I’m focused on becoming a full stack web developer. I’ve
-            been building projects from the ground up with HTML, CSS, and
-            JavaScript, and I recently started working with databases and
-            backend tools like Supabase. I’m creating real tools I actually use,
-            like a productivity planner to help me stay on track.
-          </p>
+    <!-- Main About Content -->
+    <section class="about-main">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-story">
+            <h2>My Story</h2>
+            <p>
+              Hi, I'm Alex. For the last nine years, I've worked in the service
+              industry, learning how to stay calm under pressure, solve problems
+              fast, and deal with just about every kind of situation you can
+              imagine. But behind the scenes, I've always been drawn to tech. I'd
+              stay up late tinkering with websites, teaching myself code, and
+              dreaming about doing this for real one day.
+            </p>
+            <p>
+              That day finally came. I decided to stop treating this like a hobby
+              and start treating it like my future.
+            </p>
+            <p>
+              Right now, I'm focused on becoming a full stack web developer. I've
+              been building projects from the ground up with HTML, CSS, and
+              JavaScript, and I recently started working with databases and
+              backend tools like Supabase. I'm creating real tools I actually use,
+              like a productivity planner to help me stay on track.
+            </p>
+            <p>
+              This site is part of my learning journey. I'm not taking on any work
+              just yet since I'm still in the process of leveling up, but I wanted
+              to put this out there anyway. I believe in building in public and
+              keeping things honest.
+            </p>
+            <p>
+              Outside of coding, I'm probably bowling, working a shift, or just
+              trying to improve a little every day. Thanks for checking out my
+              site. There's more to come.
+            </p>
+          </div>
+          
+          <div class="about-sidebar">
+            <div class="about-card">
+              <h3>Quick Facts</h3>
+              <ul class="facts-list">
+                <li><strong>Location:</strong> Available for remote work</li>
+                <li><strong>Experience:</strong> 2+ years learning</li>
+                <li><strong>Focus:</strong> Full Stack Development</li>
+                <li><strong>Status:</strong> Open to opportunities</li>
+              </ul>
+            </div>
+            
+            <div class="about-card">
+              <h3>Interests</h3>
+              <div class="interests-grid">
+                <span class="interest-item">🎳 Bowling</span>
+                <span class="interest-item">💻 Coding</span>
+                <span class="interest-item">📚 Learning</span>
+                <span class="interest-item">🎮 Gaming</span>
+                <span class="interest-item">🏋️ Fitness</span>
+                <span class="interest-item">🎵 Music</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <p>
-            This site is part of my learning journey. I’m not taking on any work
-            just yet since I’m still in the process of leveling up, but I wanted
-            to put this out there anyway. I believe in building in public and
-            keeping things honest.
-          </p>
+    <!-- Journey Timeline -->
+    <section class="journey">
+      <div class="container">
+        <div class="section-header">
+          <h2>My Journey</h2>
+          <p>From service industry to software development</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>2015 - 2024</h3>
+              <h4>Service Industry Professional</h4>
+              <p>Nine years of experience in customer service, problem-solving, and working under pressure. Developed strong communication and teamwork skills.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>2022 - Present</h3>
+              <h4>Self-Taught Developer</h4>
+              <p>Started learning web development in my spare time. Built my first projects and discovered my passion for creating digital solutions.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>2023 - Present</h3>
+              <h4>Full Stack Focus</h4>
+              <p>Expanded my skills to include backend development with Supabase, database design, and API development. Building complete web applications.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>2024 - Future</h3>
+              <h4>Professional Developer</h4>
+              <p>Ready to transition into a full-time development role. Excited to contribute to meaningful projects and continue growing my skills.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <p>
-            Outside of coding, I’m probably bowling, working a shift, or just
-            trying to improve a little every day. Thanks for checking out my
-            site. There’s more to come.
-          </p>
-        </article>
-      </section>
-    </main>
+    <!-- Values Section -->
+    <section class="values">
+      <div class="container">
+        <div class="section-header">
+          <h2>My Values</h2>
+          <p>What drives me in everything I do</p>
+        </div>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon">🎯</div>
+            <h3>Continuous Learning</h3>
+            <p>I believe in constantly improving and staying up-to-date with the latest technologies and best practices.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🤝</div>
+            <h3>Collaboration</h3>
+            <p>Great products come from great teamwork. I value open communication and working together to solve problems.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">💡</div>
+            <h3>Problem Solving</h3>
+            <p>I love tackling complex challenges and finding elegant solutions that make a real difference.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🎨</div>
+            <h3>Quality & Craft</h3>
+            <p>I take pride in writing clean, maintainable code and creating user experiences that people love.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Goals Section -->
+    <section class="goals">
+      <div class="container">
+        <div class="section-header">
+          <h2>My Goals</h2>
+          <p>What I'm working towards</p>
+        </div>
+        <div class="goals-content">
+          <div class="goal-item">
+            <h3>Short Term</h3>
+            <ul>
+              <li>Complete advanced JavaScript and React courses</li>
+              <li>Build 3-5 more portfolio projects</li>
+              <li>Contribute to open source projects</li>
+              <li>Network with other developers</li>
+            </ul>
+          </div>
+          <div class="goal-item">
+            <h3>Medium Term</h3>
+            <ul>
+              <li>Land my first developer role</li>
+              <li>Master backend development with Node.js</li>
+              <li>Learn cloud deployment (AWS/Azure)</li>
+              <li>Build a SaaS product</li>
+            </ul>
+          </div>
+          <div class="goal-item">
+            <h3>Long Term</h3>
+            <ul>
+              <li>Become a senior full stack developer</li>
+              <li>Mentor junior developers</li>
+              <li>Start my own tech company</li>
+              <li>Give back to the developer community</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Let's Connect</h2>
+          <p>Interested in working together or just want to chat about development?</p>
+          <a href="../Public/contact.html" class="btn btn-primary">Get In Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <img src="../assets/logo2.png" alt="AvDev" class="footer-logo" />
+            <p>Building digital experiences that matter.</p>
+            <div class="footer-social">
+              <a href="https://github.com/Av-Dev3" target="_blank">
+                <img src="../assets/GitHub_Invertocat_Light.png" alt="GitHub" />
+              </a>
+              <a href="https://codepen.io/Alex-Vandusen" target="_blank">
+                <img src="../assets/logo-white.png" alt="CodePen" />
+              </a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../Public/projects.html">Portfolio</a></li>
+              <li><a href="../Public/about.html">About</a></li>
+              <li><a href="../Public/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul>
+              <li>Web Development</li>
+              <li>UI/UX Design</li>
+              <li>Performance Optimization</li>
+              <li>Maintenance & Support</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <p>📍 Available for remote work</p>
+            <p>📧 alex@example.com</p>
+            <p>📱 (555) 123-4567</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Alex Vandusen. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script src="../script.js"></script>
   </body>
 </html>

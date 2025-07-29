@@ -1,11 +1,10 @@
+/* Blog-specific styles that complement the main style.css */
 
-
-
+/* Override any conflicting styles from the old blog structure */
 #blog_a {
   font-size: 25px;
-  color: black;
+  color: var(--text-primary);
 }
-
 
 #blog_content {
   display: flex;
@@ -17,62 +16,184 @@
 }
 
 #span1 {
-  font-family: Lucida handwriting;
+  font-family: 'Poppins', cursive;
 }
 
-#all-posts-container {
-  display: flex;
-  gap: 10px;
-  padding-right: 5px;
-  padding-left: 5px;
+/* Ensure blog cards from API have proper styling */
+.blog-grid .blog-card {
+  background: var(--bg-card);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  border: 1px solid var(--border-color);
 }
 
-.card_grid img {
-  height: auto;
+.blog-grid .blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.blog-grid .blog-card.featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.blog-grid .blog-card.featured .blog-image {
+  height: 100%;
+  min-height: 300px;
+}
+
+.blog-grid .blog-card.featured .blog-content {
+  padding: 2rem;
+}
+
+.blog-grid .blog-card .blog-image {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.blog-grid .blog-card .blog-image img {
   width: 100%;
-  display: block;
-  margin: 0 auto;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
 }
 
-.blog-card {
-  max-height: 500px;
-  background-color: white;
+.blog-grid .blog-card:hover .blog-image img {
+  transform: scale(1.05);
+}
+
+.blog-grid .blog-card .blog-overlay {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.blog-grid .blog-card .featured-badge {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.blog-grid .blog-card .blog-content {
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+}
+
+.blog-grid .blog-card .blog-meta {
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.blog-grid .blog-card .blog-category {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--border-radius-full);
+  font-weight: 500;
+}
+
+.blog-grid .blog-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.blog-grid .blog-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-
-
-.blog-card a {
- text-decoration: none;
- color: #1b7e7e;
- transition: color 0.3s ease;
- padding: 5px;
+.blog-grid .blog-card .blog-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
-.blog-card a:hover {
-  color: #ff00cc;
+.blog-grid .blog-card .tag {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--border-radius-full);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.blog-grid .blog-card .read-more {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: color var(--transition-base);
+  align-self: flex-start;
+}
+
+.blog-grid .blog-card .read-more:hover {
+  color: var(--primary-dark);
   text-decoration: underline;
 }
 
-.blog-card h3 {
-  padding: 5px;
-}
-
-.blog-card p {
-  padding: 5px;
-  display: -webkit-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-}
-
+/* Responsive adjustments for blog cards */
 @media (max-width: 768px) {
-  #all-posts-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+  .blog-grid .blog-card.featured {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .blog-grid .blog-card.featured .blog-image {
+    min-height: 200px;
+  }
+  
+  .blog-grid .blog-card.featured .blog-content {
+    padding: 1.5rem;
+  }
+  
+  .blog-grid .blog-card .blog-content {
+    padding: 1rem;
+  }
+  
+  .blog-grid .blog-card h3 {
+    font-size: 1.125rem;
+  }
+}
+
+/* Ensure proper spacing for dynamically loaded content */
+.blog-grid {
+  gap: 2rem;
+}
+
+/* Animation for dynamically loaded blog cards */
+.blog-grid .blog-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
