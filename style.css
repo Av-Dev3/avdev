@@ -829,8 +829,8 @@ footer .footer-social img,
   .footer img.footer-logo,
   footer img.footer-logo,
   .footer img[src*="logo2.png"] {
-    max-width: 80px !important;
-    width: 80px !important;
+    max-width: 180px !important;
+    width: 180px !important;
     height: auto !important;
     object-fit: contain !important;
     flex-shrink: 0 !important;
@@ -901,8 +901,8 @@ footer .footer-social img,
   .footer img.footer-logo,
   footer img.footer-logo,
   .footer img[src*="logo2.png"] {
-    max-width: 70px !important;
-    width: 70px !important;
+    max-width: 160px !important;
+    width: 160px !important;
     height: auto !important;
     object-fit: contain !important;
     flex-shrink: 0 !important;
@@ -939,8 +939,8 @@ footer .footer-social img,
   .footer img.footer-logo,
   footer img.footer-logo,
   .footer img[src*="logo2.png"] {
-    max-width: 60px !important;
-    width: 60px !important;
+    max-width: 140px !important;
+    width: 140px !important;
     height: auto !important;
     object-fit: contain !important;
     flex-shrink: 0 !important;
@@ -977,8 +977,8 @@ footer .footer-social img,
   .footer img.footer-logo,
   footer img.footer-logo,
   .footer img[src*="logo2.png"] {
-    max-width: 50px !important;
-    width: 50px !important;
+    max-width: 120px !important;
+    width: 120px !important;
     height: auto !important;
     object-fit: contain !important;
     flex-shrink: 0 !important;

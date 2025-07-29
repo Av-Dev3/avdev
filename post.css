@@ -8,9 +8,10 @@
 }
 
 .post-container {
-  max-width: var(--container-max-width);
+  max-width: 800px;
   margin: 0 auto;
   padding: 2rem var(--container-padding);
+  background: var(--bg-primary);
 }
 
 /* Loading State */
@@ -48,10 +49,11 @@
 .post-article {
   background: var(--bg-card);
   border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
   border: 1px solid var(--border-color);
   overflow: hidden;
   margin-bottom: 3rem;
+  max-width: 100%;
 }
 
 .post-header {
@@ -132,6 +134,8 @@
   color: var(--text-primary);
   max-width: 100%;
   overflow-x: auto;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 /* Post Content Typography */
@@ -334,6 +338,38 @@
 
 .post-error p {
   margin-bottom: 2rem;
+}
+
+/* Desktop Enhancements */
+@media (min-width: 769px) {
+  .post-container {
+    padding: 3rem var(--container-padding);
+  }
+  
+  .post-article {
+    margin-bottom: 4rem;
+  }
+  
+  .post-header {
+    padding: 4rem 3rem;
+  }
+  
+  .post-title {
+    font-size: 3rem;
+  }
+  
+  .post-body {
+    padding: 4rem 3rem;
+  }
+  
+  .post-content {
+    font-size: 1.25rem;
+    line-height: 1.9;
+  }
+  
+  .post-content h1 { font-size: 2.25rem; }
+  .post-content h2 { font-size: 2rem; }
+  .post-content h3 { font-size: 1.75rem; }
 }
 
 /* Responsive Design */
