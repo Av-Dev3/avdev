@@ -10,7 +10,7 @@
 .post-container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem var(--container-padding);
+  padding: 4rem var(--container-padding) 2rem;
   background: var(--bg-primary);
 }
 
@@ -375,7 +375,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .post-container {
-    padding: 1rem var(--container-padding);
+    padding: 3rem var(--container-padding) 1rem;
   }
   
   .post-header {
