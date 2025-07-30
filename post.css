@@ -10,7 +10,7 @@
 .post-container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 4rem var(--container-padding) 2rem;
+  padding: 6rem var(--container-padding) 2rem;
   background: var(--bg-primary);
 }
 
@@ -312,6 +312,7 @@
   font-weight: 500;
   transition: all var(--transition-base);
   margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 
 .back-to-blog:hover {
@@ -375,7 +376,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .post-container {
-    padding: 3rem var(--container-padding) 1rem;
+    padding: 5rem var(--container-padding) 1rem;
   }
   
   .post-header {
