@@ -232,7 +232,7 @@
   width: 100% !important;
   height: auto !important;
   border-radius: var(--border-radius-md);
-  margin: 2rem 0;
+  margin: 1rem 0;
   box-shadow: var(--shadow-sm);
   object-fit: contain !important;
   display: block !important;
@@ -257,7 +257,7 @@
     width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
-    margin: 1.5rem 0;
+    margin: 0.75rem 0;
     object-fit: contain !important;
     flex-shrink: 0 !important;
     overflow: visible !important;
@@ -279,7 +279,7 @@
     width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     border-radius: var(--border-radius-sm);
     object-fit: contain !important;
     flex-shrink: 0 !important;
