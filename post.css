@@ -12,6 +12,7 @@
   margin: 0 auto;
   padding: 6rem var(--container-padding) 2rem;
   background: var(--bg-primary);
+  overflow-x: visible;
 }
 
 /* Loading State */
@@ -51,7 +52,7 @@
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-md);
   border: 1px solid var(--border-color);
-  overflow: hidden;
+  overflow: visible;
   margin-bottom: 3rem;
   max-width: 100%;
 }
@@ -126,6 +127,8 @@
 
 .post-body {
   padding: 3rem 2rem;
+  overflow-x: visible;
+  max-width: 100%;
 }
 
 .post-content {
@@ -133,7 +136,7 @@
   line-height: 1.8;
   color: var(--text-primary);
   max-width: 100%;
-  overflow-x: auto;
+  overflow-x: hidden;
   word-wrap: break-word;
   hyphens: auto;
 }
@@ -220,12 +223,74 @@
   color: var(--text-primary);
 }
 
-.post-content img {
-  max-width: 100%;
-  height: auto;
+.post-content img,
+.post-body img,
+.post-article img,
+.post-container img,
+.post-main img {
+  max-width: 100% !important;
+  width: 100% !important;
+  height: auto !important;
   border-radius: var(--border-radius-md);
   margin: 2rem 0;
   box-shadow: var(--shadow-sm);
+  object-fit: contain !important;
+  display: block !important;
+  box-sizing: border-box !important;
+  flex-shrink: 0 !important;
+  overflow: visible !important;
+  transform: none !important;
+  position: relative !important;
+  z-index: 1 !important;
+  clip-path: none !important;
+  mask: none !important;
+  -webkit-mask: none !important;
+}
+
+/* Ensure images don't overflow on smaller screens */
+@media (max-width: 768px) {
+  .post-content img,
+  .post-body img,
+  .post-article img,
+  .post-container img,
+  .post-main img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 1.5rem 0;
+    object-fit: contain !important;
+    flex-shrink: 0 !important;
+    overflow: visible !important;
+    transform: none !important;
+    position: relative !important;
+    z-index: 1 !important;
+    clip-path: none !important;
+    mask: none !important;
+    -webkit-mask: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-content img,
+  .post-body img,
+  .post-article img,
+  .post-container img,
+  .post-main img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 1rem 0;
+    border-radius: var(--border-radius-sm);
+    object-fit: contain !important;
+    flex-shrink: 0 !important;
+    overflow: visible !important;
+    transform: none !important;
+    position: relative !important;
+    z-index: 1 !important;
+    clip-path: none !important;
+    mask: none !important;
+    -webkit-mask: none !important;
+  }
 }
 
 .post-content table {
