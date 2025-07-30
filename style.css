@@ -1873,8 +1873,8 @@ html {
   .footer-logo,
   footer .footer-logo,
   .footer .footer-logo {
-    max-width: 230px !important;
-    width: 230px !important;
+    max-width: 200px !important;
+    width: 200px !important;
     height: auto !important;
     object-fit: contain !important;
     flex-shrink: 0 !important;
