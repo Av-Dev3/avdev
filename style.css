@@ -854,6 +854,7 @@ p {
   gap: 1.5rem;
   max-width: 1000px;
   margin: 0 auto;
+  padding: 2rem 0;
   position: relative;
   z-index: 1;
 }
