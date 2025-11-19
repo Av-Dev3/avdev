@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Load theme immediately to prevent flash
+      (function() {
+        const theme = localStorage.getItem("theme") || "light";
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Alex Vandusen - Full Stack Developer</title>
@@ -39,6 +46,9 @@
             <img src="assets/logo-white.png" alt="CodePen" />
           </a>
         </div>
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon">🌙</span>
+        </button>
         <div class="hamburger">
           <span></span>
           <span></span>
@@ -66,9 +76,29 @@
         </div>
         <div class="hero-visual">
           <div class="hero-graphic">
+            <div class="code-window">
+              <div class="code-header">
+                <div class="code-dot"></div>
+                <div class="code-dot"></div>
+                <div class="code-dot"></div>
+              </div>
+              <div class="code-content">
+                <div class="code-line"><span class="code-keyword">const</span> <span class="code-variable">developer</span> = {</div>
+                <div class="code-line">  <span class="code-property">name</span>: <span class="code-string">'Alex Vandusen'</span>,</div>
+                <div class="code-line">  <span class="code-property">role</span>: <span class="code-string">'Full Stack Developer'</span>,</div>
+                <div class="code-line">  <span class="code-property">skills</span>: [</div>
+                <div class="code-line">    <span class="code-string">'React'</span>, <span class="code-string">'Next.js'</span>, <span class="code-string">'TypeScript'</span></div>
+                <div class="code-line">  ]</div>
+                <div class="code-line">};</div>
+                <div class="code-cursor">|</div>
+              </div>
+            </div>
             <div class="floating-shape shape-1"></div>
             <div class="floating-shape shape-2"></div>
             <div class="floating-shape shape-3"></div>
+            <div class="tech-icon icon-react">⚛️</div>
+            <div class="tech-icon icon-next">▲</div>
+            <div class="tech-icon icon-ts">TS</div>
           </div>
         </div>
       </div>
@@ -119,47 +149,58 @@
           <h2>Skills & Technologies</h2>
           <p>Tools and technologies I work with</p>
         </div>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Full-Stack & Development</h3>
-            <div class="skill-items">
-              <span class="skill-item">Full-Stack Web Development</span>
-              <span class="skill-item">Python Programming</span>
-              <span class="skill-item">JavaScript / TypeScript</span>
-              <span class="skill-item">Next.js Development</span>
-              <span class="skill-item">React Development</span>
-              <span class="skill-item">TailwindCSS / UI Building</span>
-            </div>
+        <div class="skills-showcase">
+          <div class="skill-badge" data-skill="Full-Stack Web Development">
+            <div class="skill-icon">💻</div>
+            <span>Full-Stack</span>
           </div>
-          <div class="skill-category">
-            <h3>Backend & Database</h3>
-            <div class="skill-items">
-              <span class="skill-item">Supabase (Postgres + Auth + RLS)</span>
-              <span class="skill-item">SQL & Database Design</span>
-              <span class="skill-item">API Design & Backend Logic</span>
-            </div>
+          <div class="skill-badge" data-skill="Python Programming">
+            <div class="skill-icon">🐍</div>
+            <span>Python</span>
           </div>
-          <div class="skill-category">
-            <h3>AI & Advanced</h3>
-            <div class="skill-items">
-              <span class="skill-item">AI Prompt Engineering</span>
-              <span class="skill-item">AI Lesson / Content Generation Systems</span>
-              <span class="skill-item">RAG / Embeddings</span>
-            </div>
+          <div class="skill-badge" data-skill="JavaScript / TypeScript">
+            <div class="skill-icon">⚡</div>
+            <span>JS/TS</span>
           </div>
-          <div class="skill-category">
-            <h3>Tools & Infrastructure</h3>
-            <div class="skill-items">
-              <span class="skill-item">Dev Environment Management (macOS, Linux, Pi)</span>
-              <span class="skill-item">Git & Version Control</span>
-            </div>
+          <div class="skill-badge" data-skill="Next.js Development">
+            <div class="skill-icon">▲</div>
+            <span>Next.js</span>
           </div>
-          <div class="skill-category">
-            <h3>Design & Planning</h3>
-            <div class="skill-items">
-              <span class="skill-item">Product Architecture & App Planning</span>
-              <span class="skill-item">Branding & Basic UI/UX</span>
-            </div>
+          <div class="skill-badge" data-skill="React Development">
+            <div class="skill-icon">⚛️</div>
+            <span>React</span>
+          </div>
+          <div class="skill-badge" data-skill="TailwindCSS / UI Building">
+            <div class="skill-icon">🎨</div>
+            <span>TailwindCSS</span>
+          </div>
+          <div class="skill-badge" data-skill="Supabase (Postgres + Auth + RLS)">
+            <div class="skill-icon">🔥</div>
+            <span>Supabase</span>
+          </div>
+          <div class="skill-badge" data-skill="SQL & Database Design">
+            <div class="skill-icon">🗄️</div>
+            <span>SQL</span>
+          </div>
+          <div class="skill-badge" data-skill="API Design & Backend Logic">
+            <div class="skill-icon">🔌</div>
+            <span>APIs</span>
+          </div>
+          <div class="skill-badge" data-skill="AI Prompt Engineering">
+            <div class="skill-icon">🤖</div>
+            <span>AI</span>
+          </div>
+          <div class="skill-badge" data-skill="RAG / Embeddings">
+            <div class="skill-icon">🔍</div>
+            <span>RAG</span>
+          </div>
+          <div class="skill-badge" data-skill="Git & Version Control">
+            <div class="skill-icon">📝</div>
+            <span>Git</span>
+          </div>
+          <div class="skill-badge" data-skill="Product Architecture & App Planning">
+            <div class="skill-icon">🏗️</div>
+            <span>Architecture</span>
           </div>
         </div>
       </div>
