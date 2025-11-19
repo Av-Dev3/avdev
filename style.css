@@ -557,12 +557,14 @@ p {
   line-height: 1.8;
   color: #e4e4e7;
   position: relative;
+  overflow-x: auto;
 }
 
 .code-line {
   margin-bottom: 4px;
   opacity: 0;
   animation: fadeInUp 0.5s ease-out forwards;
+  display: block;
 }
 
 .code-line:nth-child(1) { animation-delay: 0.5s; }
@@ -573,10 +575,19 @@ p {
 .code-line:nth-child(6) { animation-delay: 1.5s; }
 .code-line:nth-child(7) { animation-delay: 1.7s; }
 
-.code-keyword { color: #c792ea; }
-.code-variable { color: #82aaff; }
-.code-property { color: #7fdbca; }
-.code-string { color: #c3e88d; }
+.code-keyword { 
+  color: #c792ea; 
+  font-weight: 600;
+}
+.code-variable { 
+  color: #82aaff; 
+}
+.code-property { 
+  color: #7fdbca; 
+}
+.code-string { 
+  color: #c3e88d; 
+}
 
 .code-cursor {
   display: inline-block;

@@ -1,3 +1,10 @@
+// Theme Toggle Functionality - Run immediately
+(function() {
+  const html = document.documentElement;
+  const savedTheme = localStorage.getItem("theme") || "light";
+  html.setAttribute("data-theme", savedTheme);
+})();
+
 document.addEventListener("DOMContentLoaded", () => {
   // Theme Toggle Functionality
   const themeToggle = document.querySelector(".theme-toggle");
@@ -7,22 +14,25 @@ document.addEventListener("DOMContentLoaded", () => {
   // Get saved theme or default to light
   const savedTheme = localStorage.getItem("theme") || "light";
   html.setAttribute("data-theme", savedTheme);
+  
+  function updateThemeIcon(theme) {
+    if (themeIcon) {
+      themeIcon.textContent = theme === "dark" ? "☀️" : "🌙";
+    }
+  }
+  
   updateThemeIcon(savedTheme);
   
   if (themeToggle) {
-    themeToggle.addEventListener("click", () => {
+    themeToggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
       const currentTheme = html.getAttribute("data-theme");
       const newTheme = currentTheme === "dark" ? "light" : "dark";
       html.setAttribute("data-theme", newTheme);
       localStorage.setItem("theme", newTheme);
       updateThemeIcon(newTheme);
     });
-  }
-  
-  function updateThemeIcon(theme) {
-    if (themeIcon) {
-      themeIcon.textContent = theme === "dark" ? "☀️" : "🌙";
-    }
   }
   
   // Navigation functionality
