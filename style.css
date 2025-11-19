@@ -858,9 +858,10 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 1.5rem;
   max-width: 1000px;
-  margin: 0 auto;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 2rem !important;
+  margin-right: 2rem !important;
+  margin-top: 0;
+  margin-bottom: 0;
   padding: 3rem 3rem;
   position: relative;
   z-index: 1;
@@ -873,13 +874,17 @@ p {
 
 @media (max-width: 768px) {
   .skills-showcase {
-    padding: 2rem 3rem;
+    padding: 2rem 2rem;
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
   }
 }
 
 @media (max-width: 480px) {
   .skills-showcase {
-    padding: 2rem 2rem;
+    padding: 2rem 1.5rem;
+    margin-left: 0.5rem !important;
+    margin-right: 0.5rem !important;
   }
 }
 
@@ -2374,10 +2379,7 @@ html {
 }
 
 /* Skills Showcase */
-.skills-showcase {
-  padding: var(--section-padding);
-  background: var(--bg-secondary);
-}
+/* Removed conflicting styles - using .skills-showcase for badge grid instead */
 
 .skills-showcase-grid {
   display: grid;
