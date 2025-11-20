@@ -3,7 +3,7 @@ const BLOG_HOSTNAME = "full-stack-in-progress.hashnode.dev";
 const query = `
   query {
     publication(host: "${BLOG_HOSTNAME}") {
-      posts(first: 12) {
+      posts(first: 50, sortBy: PUBLISHED_AT, orderBy: DESC) {
         edges {
           node {
             title
@@ -102,7 +102,11 @@ function getCategoryFromTags(tags) {
 // Fetch and render blog posts
 fetch("https://gql.hashnode.com", {
   method: "POST",
-  headers: { "Content-Type": "application/json" },
+  headers: { 
+    "Content-Type": "application/json",
+    "Cache-Control": "no-cache"
+  },
+  cache: "no-store",
   body: JSON.stringify({ query }),
 })
   .then((res) => res.json())
@@ -114,13 +118,25 @@ fetch("https://gql.hashnode.com", {
 
     const posts = data.data.publication.posts.edges.map((edge) => edge.node);
     console.log('Fetched posts:', posts);
+    console.log('Number of posts:', posts.length);
+    console.log('Post titles:', posts.map(p => p.title));
+    console.log('Post dates:', posts.map(p => p.publishedAt));
     
     if (posts.length === 0) {
       showError("No blog posts found. Check back soon!");
       return;
     }
     
-    renderAllPosts(posts);
+    // Filter out any posts that might be in draft or deleted state
+    // (though Hashnode API should handle this, this is a safety check)
+    const publishedPosts = posts.filter(post => post.publishedAt);
+    
+    if (publishedPosts.length === 0) {
+      showError("No published blog posts found. Check back soon!");
+      return;
+    }
+    
+    renderAllPosts(publishedPosts);
   })
   .catch((err) => {
     console.error("Error fetching blog posts:", err.message);
