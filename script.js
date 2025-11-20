@@ -17,7 +17,17 @@ document.addEventListener("DOMContentLoaded", () => {
   
   function updateThemeIcon(theme) {
     if (themeIcon) {
-      themeIcon.textContent = theme === "dark" ? "☀️" : "🌙";
+      const moonIcon = themeIcon.querySelector('.moon-icon');
+      const sunIcon = themeIcon.querySelector('.sun-icon');
+      if (moonIcon && sunIcon) {
+        if (theme === "dark") {
+          moonIcon.style.display = "none";
+          sunIcon.style.display = "block";
+        } else {
+          moonIcon.style.display = "block";
+          sunIcon.style.display = "none";
+        }
+      }
     }
   }
   
@@ -87,11 +97,9 @@ document.addEventListener("DOMContentLoaded", () => {
   if (navbar) {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 100) {
-        navbar.style.background = "rgba(255, 255, 255, 0.98)";
-        navbar.style.boxShadow = "0 2px 20px rgba(0, 0, 0, 0.1)";
+        navbar.classList.add("scrolled");
       } else {
-        navbar.style.background = "rgba(255, 255, 255, 0.95)";
-        navbar.style.boxShadow = "none";
+        navbar.classList.remove("scrolled");
       }
     });
   }
