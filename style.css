@@ -1248,6 +1248,12 @@ p {
   margin-bottom: 3rem;
 }
 
+/* Portfolio page grid - more compact */
+.portfolio-projects .projects-grid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
 .project-card {
   background: var(--bg-primary);
   border-radius: var(--radius-lg);
@@ -2276,6 +2282,80 @@ html {
 .portfolio-projects {
   padding: var(--section-padding);
   background: var(--bg-primary);
+}
+
+/* Compact portfolio project cards that expand on hover */
+.portfolio-projects .project-card {
+  max-height: 400px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-projects .project-card:hover {
+  max-height: 2000px;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2), 0 0 30px rgba(99, 102, 241, 0.1);
+  border-color: var(--primary-color);
+  z-index: 10;
+}
+
+.portfolio-projects .project-content p {
+  max-height: 0;
+  opacity: 0;
+  margin: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              margin 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-projects .project-card:hover .project-content p {
+  max-height: 200px;
+  opacity: 1;
+  margin-bottom: 1rem;
+}
+
+.portfolio-projects .project-features {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin: 0;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              margin 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-projects .project-card:hover .project-features {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 1.5rem;
+}
+
+.portfolio-projects .project-tech {
+  margin-bottom: 0.5rem;
+  transition: margin-bottom 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-projects .project-card:hover .project-tech {
+  margin-bottom: 1.5rem;
+}
+
+.portfolio-projects .project-image {
+  height: 180px;
+  transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-projects .project-card:hover .project-image {
+  height: 220px;
+}
+
+.portfolio-projects .project-content {
+  padding: 1.25rem;
+  transition: padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-projects .project-card:hover .project-content {
+  padding: 1.5rem;
 }
 
 .project-overlay {
