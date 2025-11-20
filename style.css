@@ -2378,54 +2378,45 @@ html {
   padding: 1.5rem;
 }
 
-.project-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(99, 102, 241, 0.9);
+/* Project header with title and view live button */
+.project-header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity var(--transition-normal);
-}
-
-/* Only show overlay when hovering directly over the image, not the entire card */
-.project-image:hover .project-overlay {
-  opacity: 1;
-}
-
-/* For portfolio page, keep overlay hidden when card is expanded to avoid blocking content */
-.portfolio-projects .project-card:hover .project-overlay {
-  opacity: 0;
-}
-
-.portfolio-projects .project-image:hover .project-overlay {
-  opacity: 1;
-}
-
-.project-links {
-  display: flex;
+  margin-bottom: 0.75rem;
   gap: 1rem;
-  flex-direction: column;
 }
 
-.project-link {
-  background: white;
-  color: var(--primary-color);
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--radius-md);
+.project-header h3 {
+  margin: 0;
+  flex: 1;
+}
+
+.project-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--primary-color);
+  color: white;
   text-decoration: none;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
   font-weight: 500;
   transition: all var(--transition-normal);
-  text-align: center;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-.project-link:hover {
-  background: var(--bg-secondary);
+.project-link-btn:hover {
+  background: var(--secondary-color);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.project-link-btn svg {
+  width: 16px;
+  height: 16px;
 }
 
 .coming-soon-overlay {
