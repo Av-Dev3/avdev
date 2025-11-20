@@ -227,31 +227,49 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Form validation (if contact form exists)
+  // Form validation and Formspree submission (if contact form exists)
   const contactForm = document.querySelector("#contact-form");
   if (contactForm) {
+    // Set the redirect URL dynamically
+    const redirectInput = contactForm.querySelector('#formspree-redirect');
+    if (redirectInput) {
+      redirectInput.value = window.location.origin + window.location.pathname + '?success=true';
+    }
     contactForm.addEventListener("submit", function(e) {
-      e.preventDefault();
-      
-      // Basic form validation
-      const name = this.querySelector('input[name="name"]');
+      // Basic form validation before submitting to Formspree
+      const firstName = this.querySelector('input[name="firstName"]');
+      const lastName = this.querySelector('input[name="lastName"]');
       const email = this.querySelector('input[name="email"]');
       const message = this.querySelector('textarea[name="message"]');
       
-      if (!name.value || !email.value || !message.value) {
-        alert("Please fill in all fields");
-        return;
+      if (!firstName.value || !lastName.value || !email.value || !message.value) {
+        e.preventDefault();
+        alert("Please fill in all required fields");
+        return false;
       }
       
       if (!isValidEmail(email.value)) {
+        e.preventDefault();
         alert("Please enter a valid email address");
-        return;
+        return false;
       }
       
-      // Here you would typically send the form data
-      alert("Thank you for your message! I'll get back to you soon.");
-      this.reset();
+      // If validation passes, let the form submit to Formspree
+      // Formspree will handle the submission and redirect
+      const submitBtn = this.querySelector('.submit-btn');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Sending...</span>';
+      }
     });
+    
+    // Handle Formspree redirect after successful submission
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === 'true') {
+      alert("Thank you for your message! I'll get back to you within 24 hours.");
+      // Clean up URL
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
   }
 
   // Email validation helper
