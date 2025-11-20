@@ -2392,7 +2392,17 @@ html {
   transition: opacity var(--transition-normal);
 }
 
-.project-card:hover .project-overlay {
+/* Only show overlay when hovering directly over the image, not the entire card */
+.project-image:hover .project-overlay {
+  opacity: 1;
+}
+
+/* For portfolio page, keep overlay hidden when card is expanded to avoid blocking content */
+.portfolio-projects .project-card:hover .project-overlay {
+  opacity: 0;
+}
+
+.portfolio-projects .project-image:hover .project-overlay {
   opacity: 1;
 }
 
