@@ -144,6 +144,9 @@ fetch("https://gql.hashnode.com", {
     });
     
     renderAllPosts(sortedPosts);
+    
+    // Update article count in hero section
+    updateHeroStats(sortedPosts.length);
   })
   .catch((err) => {
     console.error("Error fetching blog posts:", err.message);
@@ -324,6 +327,14 @@ function addCardAnimations() {
   cards.forEach(card => {
     observer.observe(card);
   });
+}
+
+// Update hero section stats with actual data
+function updateHeroStats(articleCount) {
+  const articleCountElement = document.getElementById('article-count');
+  if (articleCountElement) {
+    articleCountElement.textContent = articleCount;
+  }
 }
 
 // Load more functionality
