@@ -3,7 +3,7 @@ const BLOG_HOSTNAME = "full-stack-in-progress.hashnode.dev";
 const query = `
   query {
     publication(host: "${BLOG_HOSTNAME}") {
-      posts(first: 50, sortBy: PUBLISHED_AT, orderBy: DESC) {
+      posts(first: 50) {
         edges {
           node {
             title
@@ -136,7 +136,14 @@ fetch("https://gql.hashnode.com", {
       return;
     }
     
-    renderAllPosts(publishedPosts);
+    // Sort posts by published date (newest first) to ensure latest posts appear first
+    const sortedPosts = publishedPosts.sort((a, b) => {
+      const dateA = new Date(a.publishedAt);
+      const dateB = new Date(b.publishedAt);
+      return dateB - dateA; // Descending order (newest first)
+    });
+    
+    renderAllPosts(sortedPosts);
   })
   .catch((err) => {
     console.error("Error fetching blog posts:", err.message);
