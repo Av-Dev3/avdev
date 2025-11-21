@@ -1022,7 +1022,7 @@ p {
 .skill-badge span {
   display: block;
   font-weight: 600;
-  color: var(--text-primary);
+  color: #000000;
   font-size: 0.875rem;
   transition: all var(--transition-normal);
   position: relative;
@@ -1042,15 +1042,16 @@ p {
 }
 
 [data-theme="dark"] .skill-badge span {
-  color: #ffffff !important;
+  color: #000000 !important;
 }
 
 [data-theme="dark"] .skill-badge:hover {
-  background: linear-gradient(135deg, rgba(31, 41, 55, 1), rgba(17, 24, 39, 1));
+  background: linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(248, 250, 252, 1));
 }
 
 [data-theme="dark"] .skill-badge:hover span {
-  color: #ffffff !important;
+  color: var(--primary-color);
+  font-weight: 700;
 }
 
 .skill-category {
