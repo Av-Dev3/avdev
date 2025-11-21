@@ -1041,6 +1041,18 @@ p {
   font-weight: 700;
 }
 
+[data-theme="dark"] .skill-badge span {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .skill-badge:hover {
+  background: linear-gradient(135deg, rgba(31, 41, 55, 1), rgba(17, 24, 39, 1));
+}
+
+[data-theme="dark"] .skill-badge:hover span {
+  color: var(--text-primary);
+}
+
 .skill-category {
   background: linear-gradient(135deg, var(--bg-primary), #fafafa);
   padding: 2rem;
