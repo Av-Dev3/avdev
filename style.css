@@ -984,16 +984,25 @@ p {
   color: var(--primary-color);
 }
 
-.skill-icon svg {
+.skill-icon svg,
+.skill-icon img {
   width: 100%;
   height: 100%;
-  stroke-width: 2;
+  object-fit: contain;
   filter: drop-shadow(0 2px 8px rgba(99, 102, 241, 0.3));
+}
+
+.skill-icon svg {
+  stroke-width: 2;
 }
 
 /* Brand logos use fill instead of stroke */
 .skill-icon svg[fill="currentColor"] {
   stroke: none;
+}
+
+.skill-icon img {
+  transition: transform 0.3s ease;
 }
 
 .skill-badge:hover .skill-icon {
@@ -1003,6 +1012,11 @@ p {
 
 .skill-badge:hover .skill-icon svg {
   filter: drop-shadow(0 4px 15px rgba(99, 102, 241, 0.5));
+}
+
+.skill-badge:hover .skill-icon img {
+  filter: drop-shadow(0 4px 15px rgba(99, 102, 241, 0.5));
+  transform: scale(1.1);
 }
 
 .skill-badge span {
